@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using SafePurchase.Dominio.ObjetoDeValor;
 
 namespace SafePurchase.Dominio.Entidades
 {
-    public class Pedido
+    public class Pedido : Entidade
     {
         public int Id { get; set; }
         public DateTime DataPedido { get; set; }
@@ -30,5 +31,16 @@ namespace SafePurchase.Dominio.Entidades
         /// </summary>
         public ICollection<ItemPedido> ItensPedido { get; set; }
 
+        public override void Validadate()
+        {
+            LimparMensagensValidacao();
+
+            if (!ItensPedido.Any())
+                AdicionarCritica("Crítica -Pedido não pode ficar sem item de pedido");
+                
+
+            if (string.IsNullOrEmpty(Cep))
+                AdicionarCritica("Crítica - Cep deve estar preenchido");
+        }
     }
 }

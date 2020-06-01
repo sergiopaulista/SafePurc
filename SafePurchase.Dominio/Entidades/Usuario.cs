@@ -2,7 +2,7 @@
 
 namespace SafePurchase.Dominio.Entidades
 {
-    public class Usuario
+    public class Usuario : Entidade
     {
         public int id { get; set; }
 
@@ -19,5 +19,9 @@ namespace SafePurchase.Dominio.Entidades
         /// </summary>
         public ICollection<Pedido> Pedidos { get; set; }
 
+        public override void Validadate()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

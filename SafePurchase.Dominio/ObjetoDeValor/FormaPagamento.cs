@@ -1,4 +1,6 @@
-﻿using SafePurchase.Dominio.Enumerados;
+﻿
+using SafePurchase.Dominio.Entidades;
+using SafePurchase.Dominio.Enumerados;
 
 namespace SafePurchase.Dominio.ObjetoDeValor
 {
