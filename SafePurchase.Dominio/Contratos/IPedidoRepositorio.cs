@@ -2,7 +2,7 @@
 
 namespace SafePurchase.Dominio.Contratos
 {
-    public interface IPedidoRepositorio<TEntity> : IBaseRepositorio<Pedido>
+    public interface IPedidoRepositorio : IBaseRepositorio<Pedido>
     {
         
 

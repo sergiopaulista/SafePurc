@@ -2,9 +2,11 @@
 
 namespace SafePurchase.Dominio.Contratos
 {
-    public interface IProdutoRepositorio<TEntity> : IBaseRepositorio<Produto> 
+    public interface IProdutoRepositorio : IBaseRepositorio<Produto>
     {
-
         
+
     }
 }
+    
+
